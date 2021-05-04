@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="detailAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="920.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.requestManagement.RequestDetailController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="690.0" layoutX="10.0" layoutY="10.0" stroke="#01579b" strokeType="INSIDE" strokeWidth="5.0" width="910.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <TableView fx:id="requestTable" layoutX="36.0" layoutY="124.0" prefHeight="532.0" prefWidth="855.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="134.0">
+         <columns>
+            <TableColumn fx:id="idColumn" prefWidth="72.0" text="ID" />
+            <TableColumn fx:id="bookNameColumn" prefWidth="190.0" text="Book Name" />
+            <TableColumn fx:id="authorColumn" prefWidth="225.0" text="Author" />
+            <TableColumn fx:id="editionColumn" prefWidth="123.0" text="Edition" />
+            <TableColumn fx:id="statusColumn" prefWidth="134.0" text="Status" />
+            <TableColumn fx:id="actionColumn" prefWidth="110.0" text="Action" />
+         </columns>
+      </TableView>
+      <Label layoutX="33.0" layoutY="98.0" prefHeight="21.0" prefWidth="185.0" text="Sort by Status" />
+      <ComboBox fx:id="sortStatusComboBox" layoutX="226.0" layoutY="93.0" onAction="#sortTableData" prefHeight="31.0" prefWidth="192.0" />
+      <Label layoutX="45.0" layoutY="14.0" text="Request Management" AnchorPane.leftAnchor="36.0" AnchorPane.topAnchor="40.0">
+         <font>
+            <Font name="Calibri Bold" size="35.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

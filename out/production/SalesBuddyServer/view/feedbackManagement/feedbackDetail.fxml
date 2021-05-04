@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="detailAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="920.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.feedbackManagement.FeedbackDetailController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="690.0" layoutX="10.0" layoutY="10.0" stroke="#01579b" strokeType="INSIDE" strokeWidth="5.0" width="910.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <TableView fx:id="feedbackTable" layoutX="40.0" layoutY="148.0" prefHeight="532.0" prefWidth="855.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="134.0">
+         <columns>
+            <TableColumn fx:id="categoryColumn" prefWidth="179.0" text="Category" />
+            <TableColumn fx:id="titleColumn" prefWidth="253.0" text="Title" />
+            <TableColumn fx:id="dateColumn" prefWidth="128.0" text="Date" />
+            <TableColumn fx:id="statusColumn" prefWidth="153.0" text="Status" />
+            <TableColumn fx:id="actionColumn" prefWidth="141.0" text="Action" />
+         </columns>
+      </TableView>
+      <Label layoutX="36.0" layoutY="86.0" prefHeight="21.0" prefWidth="156.0" text="Sort by Date :" AnchorPane.topAnchor="95.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="488.0" layoutY="86.0" prefHeight="21.0" prefWidth="185.0" text="Sort by Status" AnchorPane.topAnchor="95.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="sortDateComboBox" layoutX="198.0" layoutY="81.0" onAction="#sortTableData" prefHeight="31.0" prefWidth="233.0" AnchorPane.topAnchor="95.0" />
+      <ComboBox fx:id="sortStatusComboBox" layoutX="685.0" layoutY="81.0" onAction="#sortTableData" prefHeight="31.0" prefWidth="201.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="95.0" />
+      <Label layoutX="46.0" layoutY="50.0" text="Feedback Management" AnchorPane.leftAnchor="36.0" AnchorPane.topAnchor="40.0">
+         <font>
+            <Font name="Calibri Bold" size="35.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

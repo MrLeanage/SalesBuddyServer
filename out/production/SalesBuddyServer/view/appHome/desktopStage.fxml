@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1280.0" stylesheets="@../../lib/css/system.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.appHome.DesktopStageController">
+   <children>
+      <AnchorPane fx:id="baseAnchorPane" prefHeight="900.0" prefWidth="1280.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="1280.0" style="-fx-background-color: #01579B;" AnchorPane.bottomAnchor="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="340.0" layoutY="61.0" prefHeight="74.0" prefWidth="757.0" text="B O O K   M A R T  -  S A L E S   B U D D Y" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="39.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="125.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../lib/images/logo.png" />
+                     </image>
+                  </ImageView>
+                  <MenuButton alignment="CENTER" layoutX="1119.0" layoutY="23.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #00a8ff;" text="ACCOUNT" textFill="WHITE" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="20.0">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#logoutAccount" text="Logout ( L)" />
+                     </items>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MenuButton>
+                  <Label fx:id="userSessionLabel" alignment="CENTER_RIGHT" layoutX="720.0" layoutY="25.0" prefHeight="25.0" prefWidth="389.0" text="USER" textFill="WHITE" AnchorPane.rightAnchor="171.0" AnchorPane.topAnchor="20.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER" size="17" />
+                     </graphic>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="423.0" layoutY="112.0" prefHeight="49.0" prefWidth="545.0" text="S E R V E R   A P P L I C A T I O N " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="213.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="687.0" prefWidth="360.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="920.0" AnchorPane.topAnchor="200.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#01579b" height="574.0" layoutX="12.0" layoutY="126.0" stroke="TRANSPARENT" strokeType="INSIDE" width="360.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Line endX="168.5" layoutX="189.0" layoutY="76.0" startX="-167.0" stroke="WHITE" strokeWidth="5.0" />
+                  <VBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="134.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="495.0" prefWidth="340.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="135.0">
+                     <children>
+                        <JFXButton fx:id="homeButton" onAction="#loadHome" onMousePressed="#setSelection" prefHeight="65.0" prefWidth="345.0" style="-fx-background-color: #00a8ff;" styleClass="JFXButton" text=" HOME" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SQUARE" size="20" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="bookButton" onAction="#loadBooks" onMousePressed="#setSelection" prefHeight="65.0" prefWidth="345.0" style="-fx-background-color: #01579B;" styleClass="JFXButton" text=" BOOKS" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SQUARE" size="20" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="requestsButton" onAction="#loadRequestItem" onMousePressed="#setSelection" prefHeight="65.0" prefWidth="345.0" style="-fx-background-color: #01579B;" styleClass="JFXButton" text=" ITEM REQUESTS" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SQUARE" size="20" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="feedbackButton" onAction="#loadFeedback" onMousePressed="#setSelection" prefHeight="65.0" prefWidth="345.0" style="-fx-background-color: #01579B;" styleClass="JFXButton" text=" FEEDBACKS" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SQUARE" size="20" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="shopInfoButton" onAction="#loadShopInfo" onMousePressed="#setSelection" prefHeight="65.0" prefWidth="345.0" style="-fx-background-color: #01579B;" styleClass="JFXButton" text="SHOP INFORMATION" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SQUARE" size="20" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="userButton" onAction="#loadUserSetting" onMousePressed="#setSelection" prefHeight="65.0" prefWidth="345.0" style="-fx-background-color: #01579B;" styleClass="JFXButton" text="USER SETTINGS" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SQUARE" size="20" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="serverButton" onAction="#loadServerSetting" onMousePressed="#setSelection" prefHeight="65.0" prefWidth="345.0" style="-fx-background-color: #01579B;" styleClass="JFXButton" text="SERVER SETTINGS" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SQUARE" size="20" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <JFXToggleButton fx:id="serverStatusToggleButton" contentDisplay="RIGHT" layoutX="31.0" layoutY="7.0" onAction="#switchServerStatus" prefHeight="65.0" prefWidth="360.0" style="-fx-background-color: #01579B;" text="SERVER STATUS             " textFill="#fff600" toggleLineColor="#1fff39" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXToggleButton>
+                  <Label fx:id="dateLabel" layoutX="20.0" layoutY="85.0" prefHeight="40.0" prefWidth="248.0" style="-fx-background-color: #01579B;" text="DATE" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="112.0" AnchorPane.topAnchor="75.0">
+                     <font>
+                        <Font name="Arial Bold" size="22.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="timeLabel" alignment="CENTER_RIGHT" layoutX="245.0" layoutY="104.0" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: #01579B;" text="TIME" textFill="WHITE" AnchorPane.leftAnchor="245.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets right="15.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="detailAnchorPane" layoutX="360.0" layoutY="200.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="920.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="360.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="690.0" stroke="#01579b" strokeType="INSIDE" strokeWidth="5.0" width="910.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

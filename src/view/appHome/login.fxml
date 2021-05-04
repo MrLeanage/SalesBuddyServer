@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.appHome.LoginController">
+   <children>
+      <AnchorPane fx:id="baseAnchorPane" prefHeight="900.0" prefWidth="1280.0" style="-fx-background-color: #ebebeb;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="1280.0" style="-fx-background-color: #01579B;" AnchorPane.bottomAnchor="560.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <AnchorPane layoutX="190.0" layoutY="70.0" prefHeight="760.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="70.0">
+               <children>
+                  <Circle fill="#1976d2" layoutX="450.0" layoutY="204.0" radius="100.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                  <TextField fx:id="emailTextField" layoutX="193.0" layoutY="474.0" onMouseClicked="#clearLabel" prefHeight="41.0" prefWidth="514.0" promptText="Enter User Name" />
+                  <PasswordField fx:id="passwordField" layoutX="193.0" layoutY="536.0" onMouseClicked="#clearLabel" prefHeight="41.0" prefWidth="514.0" promptText="Enter Password" />
+                  <Label fx:id="validationLabel" alignment="CENTER" layoutX="193.0" layoutY="579.0" prefHeight="41.0" prefWidth="514.0" textFill="RED" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="350.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../lib/images/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="46.0" layoutY="333.0" text="B O O K   M A R T  -  S A L E S   B U D D Y" textFill="#01579b">
+                     <font>
+                        <Font name="System Bold" size="43.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="256.0" layoutY="410.0" text="S E R V E R   A P P L I C A T I O N " textFill="#1976d2">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="277.0" layoutY="625.0" onAction="#loginUser" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: #00a8ff;" text="Login" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton layoutX="470.0" layoutY="625.0" onAction="#clearFields" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: #04df1d;" text="Clear " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label fx:id="serverStatusLabel" alignment="CENTER" layoutX="16.0" layoutY="722.0" prefHeight="21.0" prefWidth="866.0" text="Server Status" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

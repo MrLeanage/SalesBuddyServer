@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="detailAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="920.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.serverManagement.ServerSettingDetailController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="690.0" layoutX="30.0" layoutY="30.0" stroke="#01579b" strokeType="INSIDE" strokeWidth="5.0" width="910.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="470.0" layoutX="40.0" layoutY="40.0" stroke="#01579b" strokeType="INSIDE" strokeWidth="3.0" width="760.0" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="120.0" />
+      <Label layoutX="41.0" layoutY="33.0" text="Server Settings " AnchorPane.leftAnchor="36.0" AnchorPane.topAnchor="40.0">
+         <font>
+            <Font name="Calibri Bold" size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="139.0" layoutY="309.0" prefWidth="275.0" text="RMI Server Status       :" AnchorPane.leftAnchor="139.0">
+         <font>
+            <Font name="Calibri" size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="statusTextField" alignment="CENTER_RIGHT" editable="false" layoutX="415.0" layoutY="309.0" prefHeight="31.0" prefWidth="368.0">
+         <font>
+            <Font name="Calibri" size="24.0" />
+         </font>
+      </TextField>
+      <Label layoutX="139.0" layoutY="366.0" prefWidth="275.0" text="Service Name              :" AnchorPane.leftAnchor="139.0">
+         <font>
+            <Font name="Calibri" size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameTextField" alignment="CENTER_RIGHT" editable="false" layoutX="415.0" layoutY="364.0" prefHeight="31.0" prefWidth="368.0">
+         <font>
+            <Font name="Calibri" size="24.0" />
+         </font>
+      </TextField>
+      <Label layoutX="137.0" layoutY="442.0" prefHeight="31.0" prefWidth="275.0" text="Service Port Number  :" AnchorPane.leftAnchor="137.0">
+         <font>
+            <Font name="Calibri" size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="portTextField" alignment="CENTER_RIGHT" layoutX="416.0" layoutY="442.0" onMouseClicked="#clearFields" prefHeight="31.0" prefWidth="368.0">
+         <font>
+            <Font name="Calibri" size="24.0" />
+         </font>
+      </TextField>
+      <Button layoutX="425.0" layoutY="626.0" mnemonicParsing="false" onAction="#saveAndRestartServer" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #038209;" text="Save &amp; Restart" textFill="WHITE" AnchorPane.topAnchor="610.0">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Button>
+      <Button layoutX="693.0" layoutY="626.0" mnemonicParsing="false" onAction="#setData" onMouseClicked="#clearFields" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #006a9f;" text="Roll Back Settings" textFill="WHITE" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="610.0">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Button>
+      <Label layoutX="137.0" layoutY="230.0" prefHeight="31.0" prefWidth="275.0" text="Server                            :">
+         <font>
+            <Font name="Calibri" size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="serverLabel" alignment="CENTER_RIGHT" layoutX="416.0" layoutY="230.0" prefHeight="31.0" prefWidth="368.0">
+         <font>
+            <Font name="Calibri" size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="portValidationLabel" alignment="CENTER" layoutX="137.0" layoutY="505.0" prefHeight="40.0" prefWidth="647.0" textFill="RED">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
